@@ -1,0 +1,77 @@
+{
+    "vessels": {
+        "total": 20,
+        "active": 12,
+        "docked": 6,
+        "trend": "+4.2%"
+    },
+    "containers": {
+        "daily": 1450,
+        "weekly": 9800,
+        "total": 125400,
+        "trend": "+8.1%"
+    },
+    "averageTime": {
+        "gateClear": "8.5 min",
+        "berthTurnaround": "14.2 hrs",
+        "trend": "-1.2 min"
+    },
+    "portEfficiency": {
+        "overall": "94.2%",
+        "utilization": "88.5%",
+        "safetyRating": "Perfect",
+        "trend": "+2.5%"
+    },
+    "port": {
+        "name": "Port of Ocean Master",
+        "location": "Global Coordinate Alpha",
+        "status": "Operations Normal",
+        "weather": {
+            "temp": "24°C",
+            "wind": "12 knots NW",
+            "visibility": "High",
+            "condition": "Clear Sky"
+        },
+        "tide": "Incoming",
+        "capacity": "82%"
+    },
+    "management": {
+        "berths": [
+            {
+                "id": "B1",
+                "status": "Occupied",
+                "vessel": "Ocean Queen"
+            },
+            {
+                "id": "B2",
+                "status": "Available",
+                "vessel": null
+            },
+            {
+                "id": "B3",
+                "status": "Occupied",
+                "vessel": "Sky Line"
+            },
+            {
+                "id": "B4",
+                "status": "Maintenance",
+                "vessel": null
+            },
+            {
+                "id": "B5",
+                "status": "Occupied",
+                "vessel": "Deep Sea"
+            }
+        ],
+        "workforce": {
+            "active": 124,
+            "total": 150,
+            "shift": "Morn-A"
+        },
+        "equipment": {
+            "cranesActive": 12,
+            "totalCranes": 15,
+            "fuelEfficiency": "92%"
+        }
+    }
+}

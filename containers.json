@@ -1,0 +1,14 @@
+[
+    { "id": "MSCU-99120", "size": "40ft HC", "type": "Reefer", "status": "Storage", "zone": "Z-04", "weight": "22.4t", "owner": "Maersk", "dg": false, "temp": "-18°C" },
+    { "id": "TOLU-33821", "size": "20ft", "type": "Dry Van", "status": "Inbound", "zone": "Z-12", "weight": "18.1t", "owner": "MSC", "dg": true, "temp": null },
+    { "id": "CMAU-55410", "size": "40ft HC", "type": "Open Top", "status": "Outbound", "zone": "Z-08", "weight": "26.8t", "owner": "CMA CGM", "dg": false, "temp": null },
+    { "id": "HLXU-11204", "size": "40ft", "type": "Flat Rack", "status": "Storage", "zone": "Z-02", "weight": "24.2t", "owner": "Hapag-Lloyd", "dg": true, "temp": null },
+    { "id": "MAEU-88732", "size": "20ft", "type": "Tank", "status": "Inbound", "zone": "Z-15", "weight": "15.5t", "owner": "Maersk", "dg": true, "temp": null },
+    { "id": "TEXU-44012", "size": "40ft HC", "type": "Dry Van", "status": "Processing", "zone": "Z-01", "weight": "21.0t", "owner": "Textainer", "dg": false, "temp": null },
+    { "id": "COSU-33411", "size": "40ft", "type": "Dry Van", "status": "Storage", "zone": "Z-10", "weight": "20.5t", "owner": "COSCO", "dg": false, "temp": null },
+    { "id": "ONEU-77204", "size": "20ft", "type": "Reefer", "status": "Inbound", "zone": "Z-05", "weight": "16.8t", "owner": "ONE", "dg": false, "temp": "4°C" },
+    { "id": "YMLU-11092", "size": "40ft HC", "type": "Open Top", "status": "Outbound", "zone": "Z-09", "weight": "25.2t", "owner": "Yang Ming", "dg": true, "temp": null },
+    { "id": "WHLU-88421", "size": "20ft", "type": "Dry Van", "status": "Processing", "zone": "Z-03", "weight": "19.4t", "owner": "Wan Hai", "dg": false, "temp": null },
+    { "id": "HMMU-66510", "size": "40ft", "type": "Tank", "status": "Storage", "zone": "Z-11", "weight": "23.1t", "owner": "HMM", "dg": true, "temp": null },
+    { "id": "PILU-99043", "size": "40ft HC", "type": "Dry Van", "status": "Inbound", "zone": "Z-07", "weight": "21.8t", "owner": "PIL", "dg": false, "temp": null }
+]

@@ -1,0 +1,11 @@
+[
+    { "id": "TR-442", "carrier": "FastTrack Logistics", "destination": "Chicago Hub", "status": "Loading", "eta": "Feb 03, 14:00", "driver": "Alex Reed", "plate": "IL 8821-X", "gate": "G-05" },
+    { "id": "TR-109", "carrier": "Global Freight", "destination": "Storage Area A", "status": "En Route", "eta": "Feb 02, 16:30", "driver": "Sarah Chen", "plate": "CA 9901-T", "gate": "G-01" },
+    { "id": "TR-772", "carrier": "Oceanic Trans", "destination": "Berth B-12", "status": "Arrived", "eta": "Completed", "driver": "Mike Ross", "plate": "NY 4432-B", "gate": "G-12" },
+    { "id": "TR-501", "carrier": "Prime Haulage", "destination": "New York Port", "status": "Scheduled", "eta": "Feb 04, 09:00", "driver": "James Bond", "plate": "UK 007-V", "gate": "G-08" },
+    { "id": "TR-224", "carrier": "Swift Cargo", "destination": "Inland Depot", "status": "Loading", "eta": "Feb 03, 15:30", "driver": "Tom Hardy", "plate": "TX 1124-M", "gate": "G-03" },
+    { "id": "TR-991", "carrier": "Rapid Delivery", "destination": "Zone Z-05", "status": "En Route", "eta": "Feb 03, 11:15", "driver": "Emma Watson", "plate": "WA 4401-Z", "gate": "G-02" },
+    { "id": "TR-338", "carrier": "Blue Way", "destination": "Berth B-15", "status": "Arrived", "eta": "Completed", "driver": "Christian Bale", "plate": "MA 7732-K", "gate": "G-11" },
+    { "id": "TR-661", "carrier": "Green Miles", "destination": "Warehouse 12", "status": "Scheduled", "eta": "Feb 03, 18:00", "driver": "Diana Prince", "plate": "TX 9902-L", "gate": "G-04" },
+    { "id": "TR-115", "carrier": "Speedy Lines", "destination": "Gate 4", "status": "Loading", "eta": "Just Now", "driver": "Peter Parker", "plate": "NY 3341-P", "gate": "G-07" }
+]

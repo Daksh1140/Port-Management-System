@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMIS - Port Management Information System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Advanced Port Management Information System for real-time vessel tracking and container logistics.">
+</head>
+
+<body class="dark-theme">
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-large">⚓</div>
+                <h1>Ocean <span>Master</span></h1>
+                <p>Advanced Port Management System</p>
+            </div>
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" data-mode="login">Sign In</button>
+                <button type="button" class="auth-tab" data-mode="register">Sign Up</button>
+            </div>
+            <form id="login-form" class="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username..." required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                    <small class="input-hint" id="password-hint">Starts with Uppercase, includes 1 special char & 1
+                        number.</small>
+                </div>
+                <button type="submit" class="login-submit-btn" id="auth-submit-btn">Authorize Access</button>
+                <div class="login-footer">
+                    <p>Secured by PortProtocol AI v4.2</p>
+                </div>
+            </form>
+        </div>
+        <div class="login-bg-decoration">
+            <div class="shape s1"></div>
+            <div class="shape s2"></div>
+        </div>
+    </div>
+
+    <div class="app-container hidden">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">⚓</div>
+                <span>Ocean <span>Master</span></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-view="dashboard">
+                    <span class="icon">📊</span>
+                    <span class="label">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-view="vessels">
+                    <span class="icon">🚢</span>
+                    <span class="label">Vessels</span>
+                </a>
+                <a href="#" class="nav-item" data-view="containers">
+                    <span class="icon">📦</span>
+                    <span class="label">Containers</span>
+                </a>
+                <a href="#" class="nav-item" data-view="logistics">
+                    <span class="icon">🚛</span>
+                    <span class="label">Logistics</span>
+                </a>
+
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">JD</div>
+                    <div class="user-info">
+                        <span class="name">John Director</span>
+                        <span class="role">Port Administrator</span>
+                    </div>
+                    <button class="logout-btn" id="logout-btn" title="Logout">🚪</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search vessel, container or ID...">
+                </div>
+                <div class="top-actions">
+                    <div class="api-indicator">
+                        <span class="pulse-green"></span>
+                        API: Ready
+                    </div>
+                    <div class="status-indicator">
+                        <span class="pulse"></span>
+                        Live System
+                    </div>
+                    <button class="notification-btn">🔔<span class="badge">1</span></button>
+                    <button class="logout-btn header-logout" id="header-logout-btn" title="Sign Out">🚪</button>
+                </div>
+            </header>
+
+            <section id="content-view" class="view-container">
+                <!-- Content will be injected here by script.js -->
+                <div class="loader"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Register New Container</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <form id="registration-form" class="modal-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="c-id">Container ID</label>
+                        <input type="text" id="c-id" placeholder="e.g. MSCU-12345" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="c-owner">Owner / Carrier</label>
+                        <input type="text" id="c-owner" placeholder="e.g. Maersk" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="c-size">Size</label>
+                        <select id="c-size" required>
+                            <option value="20ft">20ft</option>
+                            <option value="40ft">40ft</option>
+                            <option value="40ft HC">40ft HC</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="c-type">Type</label>
+                        <select id="c-type" required>
+                            <option value="Dry Van">Dry Van</option>
+                            <option value="Reefer">Reefer</option>
+                            <option value="Open Top">Open Top</option>
+                            <option value="Flat Rack">Flat Rack</option>
+                            <option value="Tank">Tank</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="c-zone">Storage Zone</label>
+                        <input type="text" id="c-zone" placeholder="e.g. Z-01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="c-weight">Weight (t)</label>
+                        <input type="text" id="c-weight" placeholder="e.g. 21.5t" required>
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="c-dg">
+                    <label for="c-dg">Contains Dangerous Goods (DG)</label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-registration">Cancel</button>
+                    <button type="submit" class="btn-submit">Complete Registration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vessel Management Modal -->
+    <div id="vessel-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 id="v-m-name">Manage Vessel</h2>
+                <button id="close-vessel-modal" class="close-btn">&times;</button>
+            </div>
+            <form id="vessel-manage-form" class="modal-form">
+                <input type="hidden" id="v-m-id">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="v-m-status">Status</label>
+                        <select id="v-m-status" required>
+                            <option value="Docked">Docked</option>
+                            <option value="Approaching">Approaching</option>
+                            <option value="Anchored">Anchored</option>
+                            <option value="Departing">Departing</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="v-m-berth">Berth Assignment</label>
+                        <input type="text" id="v-m-berth" placeholder="e.g. B-12" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="v-m-progress">Progress (%)</label>
+                        <input type="number" id="v-m-progress" min="0" max="100" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="v-m-cargo">Primary Cargo</label>
+                        <input type="text" id="v-m-cargo" placeholder="e.g. Electronics">
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-vessel-manage">Cancel</button>
+                    <button type="submit" class="btn-submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+index.html
